@@ -4,6 +4,8 @@ import {FaBars} from 'react-icons/fa';
 import {GrClose} from 'react-icons/gr';
 import {Link} from "react-router-dom";
 
+import {SidebarData} from "./SidebarData";
+
 
 
 function Navbar() {
@@ -28,6 +30,16 @@ function Navbar() {
                             <GrClose />
                         </Link>
                     </li>
+                    {SidebarData.map((item,index)=>{
+                        return(
+                            <li key={index} className={item.cName}>
+                                <Link to={item.path}>
+                                    {item.icon}
+                                    <span>{item.title}</span>
+                                </Link>
+                            </li>
+                        )
+                    })}
                 </ul>
 
             </nav>
