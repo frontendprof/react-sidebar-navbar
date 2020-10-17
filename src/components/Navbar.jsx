@@ -4,7 +4,9 @@ import {FaBars} from 'react-icons/fa';
 import {GrClose} from 'react-icons/gr';
 import {Link} from "react-router-dom";
 
+import "./Navbar.css";
 import {SidebarData} from "./SidebarData";
+
 
 
 

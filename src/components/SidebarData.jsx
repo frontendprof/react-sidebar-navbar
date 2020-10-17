@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FaCartPlus,FaEnvelopeOpenText } from 'react-icons/fa';
+import { FaCartPlus,FaRegEnvelopeOpen } from 'react-icons/fa';
 import { AiTwotoneHome } from 'react-icons/ai';
 import { IoIosPaper,IoMdPeople,IoMdHelpCircle } from "react-icons/io";
 
@@ -37,7 +37,7 @@ export  const SidebarData=[
     {
         title:"Messages",
         path:"/messages",
-        icon:<FaEnvelopeOpenText />,
+        icon:<FaRegEnvelopeOpen />,
         cName:"nav-text"
     },
 

@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="App">
-      <h1>Nawbar</h1>
+      <h1>My Website</h1>
       <Router>
         <Navbar />
         <Switch>
