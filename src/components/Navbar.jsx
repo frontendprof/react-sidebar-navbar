@@ -3,6 +3,7 @@ import React,{useState} from 'react';
 import {FaBars} from 'react-icons/fa';
 import {GrClose} from 'react-icons/gr';
 import {Link} from "react-router-dom";
+import {IconContext} from "react-icons";
 
 import "./Navbar.css";
 import {SidebarData} from "./SidebarData";
@@ -19,6 +20,7 @@ function Navbar() {
 
     return (
         <>
+        <IconContext.Provider value={{color:'rgb(50,50,120'}}>
             <div className="navbar">
                 <Link className="menu-bars" to="#">
                     <FaBars onClick={showSidebar}/>
@@ -26,7 +28,7 @@ function Navbar() {
             </div>
 
             <nav className={sidebar? "nav-menu active":'nav-menu'}>
-                <ul className="nav-menu-items">
+                <ul className="nav-menu-items" onClick={showSidebar}>
                     <li className="navbar-toggle">
                         <Link className="menu-bars" to="#">
                             <GrClose />
@@ -35,7 +37,7 @@ function Navbar() {
                     {SidebarData.map((item,index)=>{
                         return(
                             <li key={index} className={item.cName}>
-                                <Link to={item.path}>
+                                <Link to={item.path}> 
                                     {item.icon}
                                     <span>{item.title}</span>
                                 </Link>
@@ -45,6 +47,7 @@ function Navbar() {
                 </ul>
 
             </nav>
+        </IconContext.Provider>
             
         </>
     );
